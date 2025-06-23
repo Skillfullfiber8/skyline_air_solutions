@@ -8,12 +8,18 @@ import { useState } from "react";
 
 
 
-function Header(){
-    const [style, setStyle] = useState("close-nav")
+function Header() {
+    const [style, setStyle] = useState("close-nav");
+
     const changeStyle = () => {
-        if (style !== "close-nav") setStyle("close-nav")
-        else setStyle ("open-nav")
-    }
+        setStyle(prev => (prev === "open-nav" ? "close-nav" : "open-nav"));
+    };
+
+    const closeMenu = () => {
+        if (window.innerWidth <= 1018) {
+            setStyle("close-nav");
+        }
+    };  
     
     return(
         
@@ -21,10 +27,10 @@ function Header(){
             <div className="container-1">
                 <a href=""><img className="logo" src={logo} alt="" /></a>
                 <div className={style}>
-                    <a href="">Home</a>
-                    <a href="">Services</a>
-                    <a href="">About Us</a>
-                    <a href="">Contact Us</a>
+                    <a href="#home" onClick={closeMenu}>Home</a>
+                    <a href="#services" onClick={closeMenu}>Services</a>
+                    <a href="#aboutus" onClick={closeMenu}>About Us</a>
+                    <a href="#contactus" onClick={closeMenu}>Contact Us</a>
                 </div>
                 <div className="burger">
                     <i onClick={changeStyle}>

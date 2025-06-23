@@ -30,9 +30,11 @@
 
 .cards{
     padding-top: 50px;
+    padding-bottom: 80px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 80px;
+    column-gap: 80px;
     justify-content: space-between;
 }
 
@@ -42,8 +44,13 @@
 }
 
 .img{
-    width: 266px;
+    max-width: 266px;
     height: auto;
+}
+
+.img img{
+    width: 100%;
+    min-width: 160px;
 }
 
 .content{
@@ -58,4 +65,32 @@
 .content p{
     color: #5F5F62;
     font-size: 23px;
+}
+
+@media (max-width: 1018px){
+    .content p{
+        font-size: 16px;
+    }
+
+    .content{
+        padding: 15px;
+    }
+
+    .services h2{
+        font-size: 43px;
+    }
+
+    .services-sub{
+        font-size: 18px;
+    }
+
+    .cards{
+        gap: 40px;
+    }
+}
+
+@media (max-width: 396px){
+    .services{
+        width: 87%;
+    }
 }

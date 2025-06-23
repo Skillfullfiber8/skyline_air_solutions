@@ -4,7 +4,7 @@ import banner from "./assets/banner.svg";
 
 function Banner(){
     return(
-        <div className="container-2">
+        <div  id="home" className="container-2">
             <div className="banner">
                 <a href=""><img className="banner-img" src={banner} alt="" /></a>
             </div>
