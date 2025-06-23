@@ -25,7 +25,7 @@ function Header() {
         
         <div className="nav-bar" id="myTopnav">
             <div className="container-1">
-                <a href=""><img className="logo" src={logo} alt="" /></a>
+                <a href="#home"><img className="logo" src={logo} alt="" /></a>
                 <div className={style}>
                     <a href="#home" onClick={closeMenu}>Home</a>
                     <a href="#services" onClick={closeMenu}>Services</a>
